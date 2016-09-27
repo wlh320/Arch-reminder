@@ -1,4 +1,4 @@
-#使用 Archlinux 遇到的坑 
+﻿#使用 Archlinux 遇到的坑 
 ##安装时连接宽带
 - 使用`pppoe-setup`设置账号密码
 
@@ -26,12 +26,12 @@
 搜狗拼音在[archlinuxcn]的源里有
 
 - 然后在 `~/.xprofile`里加入如下语句
----
-    export GTK_IM_MODULE=fcitx
-    export QT_IM_MODULE=fcitx
-    export XMODIFIERS="@im=xim"
-    export XIM=fcitx
-    export XIM_PROGRAM=fcitx 
+
+        export GTK_IM_MODULE=fcitx
+        export QT_IM_MODULE=fcitx
+        export XMODIFIERS="@im=xim"
+        export XIM=fcitx
+        export XIM_PROGRAM=fcitx 
 
 - 重启一下就好了，应该可以正常用fcitx了
 
@@ -74,15 +74,15 @@
 
 - 安装方法
     - 首先在`/etc/pacman.conf`里添加
-    ---
-    	[infinality-bundle]
-        Server = http://bohoomil.com/repo/$arch
+    
+    	    [infinality-bundle]
+            Server = http://bohoomil.com/repo/$arch
              
     - 然后添加信任
-    ---
-        sudo pacman-key -r 962DDE58
-        sudo pacman-key -f 962DDE58
-        sudo pacman-key --lsign-key 962DDE58
+    
+            sudo pacman-key -r 962DDE58
+            sudo pacman-key -f 962DDE58
+            sudo pacman-key --lsign-key 962DDE58
      	
 - 安装 `sudo pacman -S freetype2-infinality-ultimate fonconfig-infinality-ultimate`
      	
@@ -90,8 +90,8 @@
 
 - 关于字体渲染的东西没怎么研究，欢迎指教
 
-##未完待续...
+#未完待续...
 
-###忠告
+##忠告
 - 还是用 mac 吧，别瞎折腾了!
 
