@@ -67,7 +67,7 @@
 - 多半是没有装`xorg-randr`这个包
 
 ##fluxgui等python写的gtk没法运行
-- 安装`sudo pacman -S python-gobject python2-gobject pygtk`
+- 安装`sudo pacman -S python2-xdg`
 
 ##安装infinality字体渲染
 - AUR里的好像很久没更新了，推荐安装[infinality-bundle]源里的
