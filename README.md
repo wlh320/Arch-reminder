@@ -1,4 +1,16 @@
-﻿#使用 Archlinux 遇到的坑 
+#Arch-reminder
+本项目是我在使用Archlinux过程中做的一个备忘录
+项目组成：
+
+1. shell脚本-记录了我安装和配置的一些步骤（**只适用于我的电脑！不要执行！不要执行！不要执行！否则对你的电脑产生什么后果我不负责** XD）
+
+2. 这个MarkDown文档- 记录了我遇到的一些问题和解决方法，当然 ArchWiki 上基本上都有，只是总结一下
+
+3. TODO
+  - [ ] 抽空在虚拟机测试一下脚本
+  - [ ] 将脚本改写成适合其他人的（太难了）
+
+#使用 Archlinux 遇到的坑
 ##安装时连接宽带
 - 使用`pppoe-setup`设置账号密码
 
@@ -15,7 +27,7 @@
 `gpasswd -a user bumblebee`
 
 - 启动bumblebeed服务
-`systemctl enable bumblebeed.service` 
+`systemctl enable bumblebeed.service`
 
 - 重启，运行`optirun glxspheres64` 如果正常说明配置好啦
 或者看一下`screenfetch`的输出，没有GPU那一栏说明已经关独显了
@@ -31,7 +43,7 @@
         export QT_IM_MODULE=fcitx
         export XMODIFIERS="@im=xim"
         export XIM=fcitx
-        export XIM_PROGRAM=fcitx 
+        export XIM_PROGRAM=fcitx
 
 - 重启一下就好了，应该可以正常用fcitx了
 
@@ -67,30 +79,34 @@
 - 多半是没有装`xorg-randr`这个包
 
 ##fluxgui等python写的gtk没法运行
-- 安装`sudo pacman -S python2-xdg`
+- 安装`sudo pacman -S python-gobject python2-gobject pygtk`
 
 ##安装infinality字体渲染
 - AUR里的好像很久没更新了，推荐安装[infinality-bundle]源里的
 
 - 安装方法
     - 首先在`/etc/pacman.conf`里添加
-    
+
     	    [infinality-bundle]
             Server = http://bohoomil.com/repo/$arch
-             
+
     - 然后添加信任
-    
+
             sudo pacman-key -r 962DDE58
             sudo pacman-key -f 962DDE58
             sudo pacman-key --lsign-key 962DDE58
-     	
+
 - 安装 `sudo pacman -S freetype2-infinality-ultimate fonconfig-infinality-ultimate`
-     	
+
 - 注意`/usr/share/doc/freetype2-infinality-ultimate/infinality-settings.sh`要放在`/etc/X11/xinit/xinitrc.d/`才有效
 
 - 关于字体渲染的东西没怎么研究，欢迎指教
 
-#未完待续...
+##安装virtualbox
+- 之前配置挺复杂的，现在装几个包就好了，安装`sudo pacman -S virtualbox virtualbox-host-modules-arch virtualbox-ext-oracle`
+- 重启之后vbox就能自己加载模块了
+
+#未完待续......
 
 ##忠告
 - 还是用 mac 吧，别瞎折腾了!
