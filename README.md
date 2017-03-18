@@ -1,4 +1,4 @@
-#Arch-reminder
+# Arch-reminder
 本项目是我在使用Archlinux过程中做的一个备忘录。
 
 
@@ -8,13 +8,13 @@
 2. 这个MarkDown文档 - 记录了我遇到的一些问题和解决方法，当然 ArchWiki 上基本上都有，只是总结一下
 
 
-#使用 Archlinux 遇到的坑
+# 使用 Archlinux 遇到的坑
 
 记录一下我遇到的一些问题的解决方法。
 
 
 
-##安装时连接宽带
+## 安装时连接宽带
 
 - 使用`pppoe-setup`设置账号密码
 - 使用`pppoe-start`连接
@@ -22,7 +22,7 @@
 
 
 
-##intel/nvidia 双显卡
+## intel/nvidia 双显卡
 
 - 首先安装需要的包
   `sudo pacman -S bumblebee mesa xf86-video-intel bbswitch nvidia`
@@ -36,7 +36,7 @@
 
 
 
-##fcitx输入法
+## fcitx输入法
 
 - 我装的是搜狗输入法，首先安装
   `sudo pacman -S fcitx-im fcitx-sogoupinyin`
@@ -56,13 +56,13 @@
 
 
 
-##WPS的公式问题（未解决）
+## WPS的公式问题（未解决）
 
 - 我目前不知道怎么办，装了deepin提供的字体也没用，谁知道怎么解决请联系我
 - 奇怪了在`libreoffice`上是正常显示公式的
 
 
-##dock上有两个图标问题
+## dock上有两个图标问题
 
 - 之前见于chrome，现在已修正，不过我发现[archlinuxcn]源里的sublime-text也有此问题，可用于解决同类问题。
 - 解决方案就是desktop文件里改成`StartupWMClass=sublime-text`
@@ -70,7 +70,7 @@
 
 
 
-##装deepin桌面进不去
+## 装deepin桌面进不去
 
 - 首先确认有没有安装`xorg-server` (非常好奇装deepin桌面的时候为什么不依赖xorg
 
@@ -81,7 +81,7 @@
 - 重启就能正常使用deepin的登陆器啦
 
 
-##Chrome的密钥环问题（未解决）
+## Chrome的密钥环问题（未解决）
 
 - 安装seahorse `sudo pacman -S seahorse`
 - ~~添加一个密钥环，起名叫chrome~~
@@ -91,20 +91,20 @@
 
 
 
-##minecraft不能运行
+## minecraft不能运行
 
 - 多半是没有装`xorg-randr`这个包
 
 
 
-##fluxgui等python写的gtk没法运行
+## fluxgui等python写的gtk没法运行
 
 - 安装`sudo pacman -S python-gobject python2-gobject pygtk python-xdg python2-xdg`
 - 我也分不清是这几个包里的哪个了，总之都装上吧233
 
 
 
-##（！废弃！）安装infinality字体渲染（！废弃！）
+## （！废弃！）安装infinality字体渲染（！废弃！）
 
 -   AUR里的好像很久没更新了，推荐安装[infinality-bundle]源里的
 
@@ -131,7 +131,7 @@
 -   **infinality作者已弃坑！！！现在直接装freetype差别不大！差别不大！差别不大！**
 
 
-##安装virtualbox
+## 安装virtualbox
 
 - 之前配置挺复杂的，现在装几个包就好了，安装`sudo pacman -S virtualbox virtualbox-host-modules-arch virtualbox-ext-oracle`
 - 重启之后vbox就能自己加载模块了
@@ -169,9 +169,12 @@
 - 最终我放弃使用虚拟机了Orz，因为内存实在不够用了
 
 
-#未完待续......
+## qtcreator 奇怪的中文字体fallback
+- 原因：中文注释fallback到了一个mono的楷体上去了
+- 解决办法：不太懂字体配置，到kde的系统设置里禁用了该字体（是全局有效的）
+
+# 未完待续......
 
 
-
-#忠告
+# 忠告
 - ~~还是用 mac 吧，别瞎折腾了!~~ 距离写这个文档到现在，虽然得折腾，linux桌面还是进步不小的，我目前的需求基本都能满足，所以我还是选择自由的linux 嘿嘿，受不了折腾的就去用mac吧！
