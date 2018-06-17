@@ -1,5 +1,6 @@
 # Arch-reminder
-本项目是我在使用Archlinux过程中做的一个备忘录。
+
+> 本项目是我在使用 Archlinux 过程中做的一个备忘录。
 
 
 项目组成：
@@ -173,8 +174,22 @@
 - 原因：中文注释fallback到了一个mono的楷体上去了
 - 解决办法：不太懂字体配置，到kde的系统设置里禁用了该字体（是全局有效的）
 
-# 未完待续......
 
+## 安装 LaTeX 环境
+
+推荐使用 `xelatex`, 安装命令:
+
+```
+sudo pacman -S texlive-bin texlive-core texlive-langchinese texlive-latexextra
+```
+
+注意不要忘了最后的那个包，不然编译时会报错
+
+之后就可以用 `xelatex` 命令直接编译带中文的 tex 文件了
+
+目前用到这么多，后续用到再补充
+
+# 未完待续......
 
 # 忠告
 - ~~还是用 mac 吧，别瞎折腾了!~~ 距离写这个文档到现在，虽然得折腾，linux桌面还是进步不小的，我目前的需求基本都能满足，所以我还是选择自由的linux 嘿嘿，受不了折腾的就去用mac吧！
