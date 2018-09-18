@@ -189,6 +189,17 @@ sudo pacman -S texlive-bin texlive-core texlive-langchinese texlive-latexextra
 
 目前用到这么多，后续用到再补充
 
+## KDE 环境支持 GTK 程序的全局菜单
+
+默认是只支持 QT 程序的，要支持 GTK 的话可能要安装一些包：
+
+```
+sudo pacman -S appmenu-gtk-module libdbusmenu-gtk2 libdbusmenu-gtk3
+```
+
+然后自带的全局菜单 widget 应该就能支持 GTK 程序了， 可以打开 `vscode、xfce4-terminal` 等程序测试一下， electron 写的程序的菜单应该也是支持的
+
+
 # 未完待续......
 
 # 忠告
